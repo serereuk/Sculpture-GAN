@@ -61,6 +61,10 @@ True
 True
 """
 
+"""
+이 친구가 하는 일은 binvox 파일을 python이 읽을 수 있게 도와주는 친구다.
+"""
+
 import numpy as np
 
 class Voxels(object):
