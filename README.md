@@ -3,6 +3,20 @@
 * I just added the comments in Korean about the code without any fixations
 * All codes are from robbiebarrat!
 
+1. 코드 구성 
+
+* binvox_rw.py -> binvox 파일을 python에서 읽을 수 있게 도와주는 귀여운 친구이다. 
+binvox 파일에 대한 설명은 다음에 있다. ->  http://dimatura.net/misc_projects/binvox_rw_py/  
+이 코드 역시 저 링크에서 따온듯 하다!
+
+* generate_dataset.py -> 데이터 파일을 만들어야한다! 
+stl 파일을 binvox 파일로 변환하고 저장하는 역할을 한다. render가 True 면 그림을 그려준다.  
+특이 사항은 파이썬 2.7을 사용했다는 점 -> 이 코드를 사용하려면 파이썬 3.x로 수정해주는 것이 좋을 것 같다.
+
+* Train을 할 때 DCGAN을 사용 -> 모양을 만들 때 Mnist -DCGAN을 사용하였다.
+
+* Visualize.py -> 그림을 그려준다.
+
 # Sculpture-GAN
 3D DCGAN inspired GAN trained on 32x32x32 voxelizations of [Thingi10k](https://ten-thousand-models.appspot.com/) - a corpus of 10,000 3D printable objects and sculptures - as a result, the generated sculptures are almost always 3D-printable, but usually do not have any real 'meaning', and are just abstract sorts of shapes.
 
