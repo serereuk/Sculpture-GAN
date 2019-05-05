@@ -1,4 +1,4 @@
-#To Understand the Sculpture-Gan!
+# To Understand the Sculpture-Gan!
 
 * I just added the comments in Korean about the code without any fixations
 * All codes are from robbiebarrat!
