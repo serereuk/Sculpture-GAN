@@ -15,6 +15,20 @@ stl 파일을 binvox 파일로 변환하고 저장하는 역할을 한다. rende
 
 * Train을 할 때 DCGAN을 사용 -> 모양을 만들 때 Mnist -DCGAN을 사용하였다.
 
+* DCGAN - Discriminator
+- 4 layer CNN, each depth is increasing by 50, the window is 5,5,5 and the stride is 2,2,2
+- The specific description of one layer is CNN - ReakyRelu(alpha = 0.2) - Dropout
+- The last activation function is sigmoid
+
+* DCGAN - Generator
+1. Dense (dim*dim*dim*depth) - batchnormalization - relu - reshape - dropout
+2. one layer consists of sequence that upsample - conv3dTranspose - batchnormalization - relu
+3. 4 layer and end with sigmoid
+
+* upsample - Repeats the 1st, 2nd and 3rd dimensions of the data by size[0], size[1] and size[2] respectively.
+
+* Mnist-gan - for training the DCGAN
+
 * Visualize.py -> 그림을 그려준다.
 
 # Sculpture-GAN
